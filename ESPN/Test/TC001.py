@@ -13,7 +13,7 @@ class TC001(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
-        cls.driver = webdriver.Chrome(executable_path="ESPN/Driver/chromedriver.exe")
+        cls.driver = webdriver.Chrome(executable_path="./ESPN/Driver/chromedriver.exe")
         cls.driver.delete_all_cookies()
         cls.driver.maximize_window()
         cls.driver.get("https://www.espn.in/")
