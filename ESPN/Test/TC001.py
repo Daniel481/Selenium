@@ -44,10 +44,13 @@ class TC001(unittest.TestCase):
             print("Page not loaded properly")
 
     def test_search(self):
-        driver = self.driver
-        search = SearchPage(driver)
-        search.searchKeyword("FootBall")
-        time.sleep(5)
+        try:
+            driver = self.driver
+            search = SearchPage(driver)
+            search.searchKeyword("FootBall")
+            time.sleep(5)
+        except:
+            print("Page not loaded properly")
 
     def test_Follow(self):
         try:
