@@ -12,7 +12,6 @@ class SignUpPage():
         self.driver.find_element(by=By.XPATH, value="//button[text()='Sign Up']").click()
         self.driver.implicitly_wait(10)
         self.driver.switch_to.frame("disneyid-iframe")
-        return self
 
     def enterFirstName(self, firstname):
         self.driver.find_element(by=By.XPATH, value="//input[@name='firstName']").send_keys(firstname)

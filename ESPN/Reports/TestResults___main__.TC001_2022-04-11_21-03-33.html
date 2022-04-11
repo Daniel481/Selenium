@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2022-04-05 12:50:37</p>
-                <p class='attribute'><strong>Duration: </strong>128.98 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 4</p>
+                <p class='attribute'><strong>Start Time: </strong>2022-04-11 21:03:33</p>
+                <p class='attribute'><strong>Duration: </strong>39.21 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 0, Error: 2</p>
             </div>
         </div>
         <div class="row">
@@ -27,65 +27,45 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class='success'>
-                            <td class="col-xs-10">test_Follow</td>
-                            <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
-                            </td>
-                            <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
-                            </td>
-                        </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>Test Completed
-</p>
-                            </td>
-                        </tr>
-                        <tr class='success'>
+                        <tr class='warning'>
                             <td class="col-xs-10">test_login</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
                             </td>
                             <td class="col-xs-1">
                                 <button class="btn btn-default btn-xs">View</button>
                             </td>
                         </tr>
                         <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>Test Completed
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AttributeError: type object 'TC001' has no attribute 'read_excel'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Danny\PycharmProjects\Selenium\ESPN\Test\TC001.py", line 43, in setUp
+    cls.read_excel()
+AttributeError: type object 'TC001' has no attribute 'read_excel'
+C:\Users\Danny\PycharmProjects\Selenium\ESPN\Test\TC001.py:36: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+  cls.driver = webdriver.Chrome(executable_path="./ESPN/Driver/chromedriver.exe")
 </p>
                             </td>
                         </tr>
-                        <tr class='success'>
-                            <td class="col-xs-10">test_search</td>
-                            <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
-                            </td>
-                            <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
-                            </td>
-                        </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>Test Completed
-</p>
-                            </td>
-                        </tr>
-                        <tr class='success'>
+                        <tr class='warning'>
                             <td class="col-xs-10">test_signup</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
                             </td>
                             <td class="col-xs-1">
                                 <button class="btn btn-default btn-xs">View</button>
                             </td>
                         </tr>
                         <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>Test Completed
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AttributeError: type object 'TC001' has no attribute 'read_excel'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Danny\PycharmProjects\Selenium\ESPN\Test\TC001.py", line 43, in setUp
+    cls.read_excel()
+AttributeError: type object 'TC001' has no attribute 'read_excel'
 </p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 4, Pass: 4 -- Duration: 128.98 s
+                                Total: 2, Pass: 0, Error: 2 -- Duration: 39.21 s
                             </td>
                         </tr>
                     </tbody>
