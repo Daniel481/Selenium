@@ -3,6 +3,7 @@ import unittest
 
 import HtmlTestRunner
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 from ESPN.Pages.FollowPage import Followpage
 from ESPN.Pages.Loginpage import LoginPage
@@ -78,6 +79,9 @@ class TC001(unittest.TestCase):
             search.searchKeyword("FootBall")
             follow = Followpage(driver)
             follow.FollowFootBallTeam()
+            self.driver.implicitly_wait(10)
+            following = self.driver.find_element(by=By.XPATH, value="//button[text()='Following']").is_displayed()
+            tc.assertTrue(following)
             time.sleep(5)
         except:
             driver.refresh()
