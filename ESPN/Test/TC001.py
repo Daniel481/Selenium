@@ -1,12 +1,13 @@
 import time
+import unittest
+
+import HtmlTestRunner
+from selenium import webdriver
 
 from ESPN.Pages.FollowPage import Followpage
 from ESPN.Pages.Loginpage import LoginPage
 from ESPN.Pages.SearchPage import SearchPage
 from ESPN.Pages.SignupPage import SignUpPage
-from selenium import webdriver
-import HtmlTestRunner
-import unittest
 
 
 class TC001(unittest.TestCase):
@@ -20,48 +21,36 @@ class TC001(unittest.TestCase):
         cls.driver.implicitly_wait(5)
 
     def test_signup(self):
-        try:
-            driver = self.driver
-            sign_up = SignUpPage(driver)
-            sign_up.openSignUpPage()
-            sign_up.enterFirstName("Test")
-            sign_up.enterLastName("Name")
-            sign_up.enterEmail("dbxd78x@btcmod.com")
-            sign_up.enterPassword("Test@123")
-            time.sleep(10)
-        except:
-            print("Page not loaded properly")
+        driver = self.driver
+        sign_up = SignUpPage(driver)
+        sign_up.openSignUpPage()
+        sign_up.enterFirstName("Test")
+        sign_up.enterLastName("Name")
+        sign_up.enterEmail("dbxd78x@btcmod.com")
+        sign_up.enterPassword("Test@123")
+        time.sleep(10)
 
     def test_login(self):
-        try:
-            driver = self.driver
-            login = LoginPage(driver)
-            login.openLoginpage()
-            login.enterEmail("dbxd78x@btcmod.com")
-            login.enterPassword("Test@123")
-            time.sleep(10)
-        except:
-            print("Page not loaded properly")
+        driver = self.driver
+        login = LoginPage(driver)
+        login.openLoginpage()
+        login.enterEmail("dbxd78x@btcmod.com")
+        login.enterPassword("Test@123")
+        time.sleep(10)
 
     def test_search(self):
-        try:
-            driver = self.driver
-            search = SearchPage(driver)
-            search.searchKeyword("FootBall")
-            time.sleep(5)
-        except:
-            print("Page not loaded properly")
+        driver = self.driver
+        search = SearchPage(driver)
+        search.searchKeyword("FootBall")
+        time.sleep(5)
 
     def test_Follow(self):
-        try:
-            driver = self.driver
-            search = SearchPage(self.driver)
-            search.searchKeyword("FootBall")
-            follow = Followpage(driver)
-            follow.FollowFootBallTeam()
-            time.sleep(5)
-        except:
-            print("Page not loaded properly")
+        driver = self.driver
+        search = SearchPage(self.driver)
+        search.searchKeyword("FootBall")
+        follow = Followpage(driver)
+        follow.FollowFootBallTeam()
+        time.sleep(5)
 
     @classmethod
     def tearDown(cls):

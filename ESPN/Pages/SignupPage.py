@@ -1,8 +1,10 @@
 import time
+
 from selenium.webdriver.common.by import By
 
+
 class SignUpPage():
-    
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -21,7 +23,7 @@ class SignUpPage():
     def enterEmail(self, email):
         self.driver.find_element(by=By.XPATH, value="//input[@name='email']").send_keys(email)
         return self
-    
+
     def enterPassword(self, password):
         self.driver.find_element(by=By.XPATH, value="//input[@name='newPassword']").send_keys(password)
         return self
@@ -29,7 +31,7 @@ class SignUpPage():
     def clickSignUp(self):
         self.driver.find_element(by=By.XPATH, value="//button[text()='Sign Up']").click()
         return self
-    
+
     def Search(self):
         self.driver.get("https://www.espn.in/")
         time.sleep(1)
@@ -38,7 +40,8 @@ class SignUpPage():
         self.driver.find_element(by=By.XPATH, value="//input[@id='global-search-input']").send_keys("FootBall")
         self.driver.find_element(by=By.XPATH, value="//input[@class='btn-search']").click()
         time.sleep(3)
-        self.driver.find_element(by=By.XPATH, value="//a[@data-track-searchresultselected='Navy Football Club']").click()
+        self.driver.find_element(by=By.XPATH,
+                                 value="//a[@data-track-searchresultselected='Navy Football Club']").click()
         self.driver.find_element(by=By.XPATH, value="//button[text()='Follow']").click()
 
     def tearDown(self):
